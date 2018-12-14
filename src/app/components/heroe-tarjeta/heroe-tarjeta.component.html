@@ -1,0 +1,12 @@
+<div class="card animated fadeIn fast">
+    <img class="card-img-top" [src]="hero.img" [alt]="hero.nombre">
+    <div class="card-body">
+        <h5 class="card-title">{{hero.nombre}}</h5>
+        <p class="card-text">{{hero.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{hero.aparicion | date: 'MMMM y'}}</small></p>
+        <!-- asi se hace programando el redireccionamiento requiere crear evento click y metodo -->
+        <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">Show more...</button>
+        <!-- utilizando routerlink -->
+        <!----a [routerLink]="['/hero',i]" class="btn btn-outline-primary btn-block">show more...</a-->
+    </div>
+</div>

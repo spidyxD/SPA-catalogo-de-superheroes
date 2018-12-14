@@ -1,0 +1,21 @@
+<div class="row animated fadeIn normal">
+    <div class="col-md-12">
+        <div class="container">
+            <div class="card border-secondary mb-3 animated fadeIn fast" style="max-width: 100%;">
+                <div class="card-header">
+                    <h1>{{hero.nombre | uppercase}}</h1>
+                    <p>Date to released: {{hero.aparicion | date: 'd MMMM y'}} </p>
+
+                </div>
+                <div class="card-body text-secondary">
+                    <img class="card-img-top" [src]="hero.img" [alt]="hero.nombre">
+                    <p class="card-text">{{hero.bio}}</p>
+                    <img class="card-img-bottom" [src]="getComic()" [alt]="hero.casa" style="width: 100px; height: 100px;">
+                </div>
+
+            </div>
+            <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-default">Go back</a>
+        </div>
+
+    </div>
+</div>

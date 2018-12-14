@@ -1,0 +1,11 @@
+<h1>Heroes of Marvel and DC</h1>
+<hr>
+<div class="container">
+    <div class="card-columns">
+        <!--*ngFor="let hero of heroes; let i=index"-->
+        <!-- [valor]=""  esto es un argumento que va de la clase padre a la clase hija-->
+        <!--se crea un evento personalizado para utilizar metodos heredados usar el event para recibir el elemento deseado-->
+        <app-heroe-tarjeta (heroSelected)="verHeroe($event)" [hero]="hero" [index]="i" *ngFor="let hero of heroes; let i=index"></app-heroe-tarjeta>
+    </div>
+    <a [routerLink]="['/home']" class="btn btn-outline-danger btn-default">Go back</a>
+</div>

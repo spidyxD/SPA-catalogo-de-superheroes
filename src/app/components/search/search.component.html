@@ -1,0 +1,17 @@
+<h1>Searching: {{termino}}</h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="heroes.length==0">
+    <div class="col-md-12">
+        <div class="alert-info">
+            <h1>Results not found with term {{termino}}</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card-columns">
+        <!--*ngFor="let hero of heroes; let i=index"-->
+        <!-- [valor]=""  esto es un argumento que va de la clase padre a la clase hija-->
+        <app-heroe-tarjeta (heroSelected)="verHeroe($event)" [hero]="hero" [index]="hero.idx" *ngFor="let hero of heroes; let i=index"></app-heroe-tarjeta>
+    </div>
+    <a [routerLink]="['/home']" class="btn btn-outline-danger btn-default">Go back</a>
+</div>
